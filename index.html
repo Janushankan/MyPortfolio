@@ -45,11 +45,11 @@
                 I'm a quick learner who's ready to tackle any challenge with maximum effort.
             </p>
             <div class="social-media">
-                <a href="https://www.facebook.com/profile.php?id=100067179768285"><i class='bx bxl-facebook'></i></a>
-                <a href="https://twitter.com/VJ_Janu1006"><i class='bx bxl-twitter'></i></a>
-                <a href="https://www.instagram.com/vj_janu06/"><i class='bx bxl-instagram-alt'></i></a>
-                <a href="https://www.linkedin.com/in/vanarajah-janushankan/"><i class='bx bxl-linkedin'></i></a>
-                <a href="https://github.com/Janushankan"><i class='bx bxl-github'></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100067179768285" target="_blank"><i class='bx bxl-facebook'></i></a>
+                <a href="https://twitter.com/VJ_Janu1006" target="_blank"><i class='bx bxl-twitter'></i></a>
+                <a href="https://www.instagram.com/vj_janu06/" target="_blank"><i class='bx bxl-instagram-alt'></i></a>
+                <a href="https://www.linkedin.com/in/vanarajah-janushankan/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com/Janushankan" target="_blank"><i class='bx bxl-github'></i></a>
             </div>
             <a href="#" class="btn">Download CV</a>
         </div>
@@ -356,16 +356,19 @@
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me!</span></h2>
 
-        <form action="#">
+        <form action="" id="contact-form">
             <div class="input-box">
-                <input type="text" placeholder="Full Name">
-                <input type="email" placeholder="Email Address">
+                <input type="text" name="user_name" placeholder="Full Name">
+                <input type="email" name="user_email" placeholder="Email Address">
             </div>
             <div class="input-box">
-                <input type="text" placeholder="Mobile Number">
-                <input type="email" placeholder="Email Subject">
+                <input type="text" name="user_mobile" placeholder="Mobile Number">
+                <input type="text" name="user_subject" placeholder="Email Subject">
             </div>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+            <textarea name="user_message" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+
+            <p class="contact-message" id="contact-message"></p>
+
             <input type="submit" value="Send Message" class="btn">
         </form>
     </section>
@@ -380,6 +383,9 @@
             <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
         </div>
     </footer>
+
+    <!-- email js -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
     <!-- scroll reveal -->
     <script src="https://unpkg.com/scrollreveal"></script>

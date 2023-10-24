@@ -7,6 +7,34 @@ menuIcon.onclick = () => {
     navbar.classList.toggle('active');
 };
 
+/* email js */
+const contactForm = document.getElementById('contact-form'),
+    contactMessage = document.getElementById('contact-message');
+
+const sendEmail = (e) => {
+    e.preventDefault();
+
+    //serviceID - templateID - #form - publickey
+    emailjs.sendForm('service_r6l08uk', 'template_wqxu4ez', '#contact-form', 'TTEKPxMxbkGRo6r1W')
+        .then(() => {
+            //Show sent message
+            contactMessage.textContent = 'Message sent successfully ✅'
+
+            //Remove message after five seconds
+            setTimeout(() => {
+                contactMessage.textContent = '';
+            }, 5000)
+
+            //Clear input fields
+            contactForm.reset();
+        }, () => {
+            //Show error message
+            contactMessage.textContent = 'Message not sent (service error) ❌';
+        })
+}
+
+contactForm.addEventListener('submit', sendEmail);
+
 /* scroll selections active link */
 let selections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');

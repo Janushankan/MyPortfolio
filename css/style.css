@@ -545,6 +545,13 @@ span {
     cursor: pointer;
 }
 
+.contact-message {
+    position: absolute;
+    left: 0;
+    bottom: 4.5rem;
+    font-size: 1.6rem;
+}
+
 .footer {
     display: flex;
     justify-content: space-between;
